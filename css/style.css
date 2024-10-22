@@ -1,9 +1,14 @@
+* {
+    overflow: visible;
+}
+
 body {
+    position: relative;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(244, 244, 244);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,8 +31,13 @@ header {
 }
 
 header h1 {
+    text-align: left;
     margin: 0;
     font-size: 2rem;
+}
+
+header h2 {
+  z-index: 1;  
 }
 
 nav ul {
@@ -73,6 +83,8 @@ nav ul li a:hover {
 }
 
 section {
+    display: flex;
+    justify-content: space-between;
     margin: 20px 0;
     padding: 20px;
     background-color: white;
@@ -83,11 +95,63 @@ section {
     animation: slideUp 1s ease-out forwards;
 }
 
+section .photo {
+    background-color: rgba(128, 128, 128, 0.144);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+section .bloc-1 {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section .bloc-2 {
+    width: auto;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+
+section p {
+    margin: auto;
+}
+
+section #photo-cv {
+    width: 10%;
+    border-radius: 5px;
+    text-align: right;
+}
+
+section #photo-secret-santa {
+    width: 30%;
+    border-radius: 5px;
+    text-align: right;
+}
+
+section #photo-stop-cigarette {
+    width: 30%;
+    border-radius: 5px;
+    text-align: right;
+}
+
+section #photo-stop-cigarette-p2 {
+    width: 70%;
+    border-radius: 5px;
+    text-align: right;
+}
+
+body section h2 {
+    margin: 0;
+}
+
 h2 {
     opacity: 0;
     animation: fadeInUp 1s forwards;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #333;
 }
 
 @media (max-width: 768px) {
@@ -187,4 +251,12 @@ footer {
     to {
         opacity: 1;
     }
+}
+
+#animatedElement {
+    position: relative;
+}
+
+#followElement {
+    position: absolute;
 }
