@@ -36,16 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             followElement.style.color = 'black';
         }
-        const listItems = document.querySelectorAll('nav ul li a');
-        listItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 }
-                });
-            });
-        });
+        
     }); 
 });
 
